@@ -8,17 +8,17 @@ public class Base_Class
 	static String projectPath= System.getProperty("user.dir");
 	public static WebDriver driver;
 	
-	public static WebDriver getDriver()
+	public void initDriver()
 	{
 
 	//String projectPath = System.getProperty("user.dir");
 	//System.out.println(projectPath);
 	
 	System.setProperty("webdriver.chrome.driver", projectPath+"\\driver\\chromedriver.exe");
-	WebDriver driver = new ChromeDriver();
+    driver = new ChromeDriver();
 	driver.get("https://demo.guru99.com/v4/index.php");
 	driver.manage().window().maximize();
-	return driver;
+	
 	
 	
 	
